@@ -1,6 +1,13 @@
-import React from "react"; // Import React
-import ReactDOM from "react-dom"; // Import ReactDOM for rendering
-import "./index.css"; // Import global CSS styles
-import App from "./App"; // Import the main App component)
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
